@@ -1,0 +1,41 @@
+My Coding Journey Homepage ///(index.html)
+    contains: 
+        Homepage info:
+            Introduce Myself
+            Why I decided to teach myself to code
+            My study plan, goals, etc.
+            How this website shows everything I've learned and what I have done
+        Nav bar
+            Learning HTML & CSS ///(html-css-index.html)
+            
+                What HTML is?
+                    Video
+                What you should know and understand:
+                
+                Activities and challanges to I worked on:
+                    -I built a website for my friend
+                    -I built elementary school math manipulatives
+                    -I started building this website
+                Suggestions: 
+                    -Start building your personal website
+                Resources I used: 
+                    Codecademy HTML / CSS
+                    Responsive web design certification from freeCodeCamp(38 hours)
+                    HTML and CSS sections of Colt Steele's Web Developer Bootcamp on UDEMY
+
+            Learning Git & Github ///(git-github-index.html)
+            Learning JavaScript ///(javascript-index.html)
+                contains: 
+                    Homepage info:
+                        overview
+                        Nav bar
+                            my notes/study companion/// page needed
+                                Nav bar 
+                                    overview
+                                    javascript basics ///(javascript-basics.html)
+                                    control flow basics ///(control-flow-basics.html)
+                                    functions and methods ///(functions-methods.html)
+                                    object literals ///(object-literals.html)
+                            my challenges
+            *add others*
+

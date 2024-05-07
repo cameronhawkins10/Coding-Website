@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>JavaScript</h1>
+    </header>
+    <main>
+
+        <section id="JavaScript Basics">
+            <h2>JavaScript Basics</h2>
+
+            <section id="adding-js">
+                <h3>Adding JavaScript to a Web Page</h3>
+                <p>Description: JavaScript can be added to an HTML document in various ways. It can be included directly
+                    within an HTML file using <code>&lt;script&gt;</code> tags, or it can be linked as an external file.
+                </p>
+                <h4>Examples:</h4>
+                <pre><code>
+        <!-- Inline Script -->
+        &lt;script&gt;
+        console.log('Hello, world!');
+        &lt;/script&gt;
+
+        <!-- External Script -->
+        &lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+            </section>
+
+            <section id="browser-console">
+                <h3>The Browser Console</h3>
+                <p>Description: The browser console is a tool that allows developers to write and execute JavaScript
+                    code, as well as debug their web pages.</p>
+                <h4>Usage:</h4>
+                <ul>
+                    <li>Press F12 or right-click on the page and select "Inspect" to open the browser developer tools.
+                    </li>
+                    <li>Go to the "Console" tab to view and interact with the console.</li>
+                </ul>
+                <p>Example:</p>
+                <pre><code>console.log('Hello, console!');</code></pre>
+            </section>
+
+            <section id="variables-constants-comments">
+                <h3>Variables, Constants, and Comments</h3>
+                <p>Description: Variables are used to store data values, while constants are used to store values that
+                    should not change during the execution of a program. Comments are used to add explanatory notes to
+                    the code.</p>
+                <h4>Syntax:</h4>
+                <pre><code>
+        // Variable declaration
+        let name = 'John';
+    
+        // Constant declaration
+        const PI = 3.14;
+    
+        // Single-line comment
+    
+        /*
+        Multi-line
+        comment
+        */
+        </code></pre>
+                <p>Note: Use <code>let</code> for variables whose values may change and <code>const</code> for constants
+                    whose values should remain constant.</p>
+            </section>
+
+            <section id="data-types">
+                <h3>Data Types at a Glance</h3>
+                <p>Description: JavaScript has several data types, including strings, numbers, booleans, null,
+                    undefined, objects, and symbols.</p>
+                <h4>Examples:</h4>
+                <pre><code>let name = 'John'; // String
+        let age = 30; // Number
+        let isStudent = true; // Boolean
+        let person = null; // Null
+        let car; // Undefined
+        let user = { name: 'John', age: 30 }; // Object
+        </code></pre>
+            </section>
+
+            <section id="strings">
+                <h3>Strings</h3>
+                <p>Description: Strings are sequences of characters enclosed within single or double quotes.</p>
+                <h4>Examples:</h4>
+                <pre><code>let greeting = 'Hello, world!';
+        let firstName = "John";
+        </code></pre>
+            </section>
+
+            <section id="string-methods">
+                <h3>Common String Methods</h3>
+                <p>Description: JavaScript provides several built-in methods for manipulating strings.</p>
+                <h4>Examples:</h4>
+                <pre><code>let str = 'Hello, world!';
+    
+        str.length; // Returns the length of the string
+        str.toUpperCase(); // Converts the string to uppercase
+        str.toLowerCase(); // Converts the string to lowercase
+        str.indexOf('world'); // Returns the index of the first occurrence of 'world'
+        str.slice(7); // Returns a substring starting from index 7
+        </code></pre>
+            </section>
+
+            <section id="numbers">
+                <h3>Numbers</h3>
+                <p>Description: JavaScript treats all numeric values, whether integer or floating-point, as numbers.</p>
+                <h4>Examples:</h4>
+                <pre><code>let num1 = 10; // Integer
+        let num2 = 3.14; // Floating-point
+        </code></pre>
+            </section>
+
+            <section id="template-strings">
+                <h3>Template Strings</h3>
+                <p>Description: Template literals, or template strings, allow for easier string interpolation and
+                    multi-line strings.</p>
+                <h4>Syntax:</h4>
+                <pre><code>let name = 'John';
+        let greeting = `Hello, ${name}!`;
+        </code></pre>
+            </section>
+
+            <section id="arrays">
+                <h3>Arrays</h3>
+                <p>Description: Arrays are ordered collections of values, which can be of any data type, accessed by
+                    index.</p>
+                <h4>Examples:</h4>
+                <pre><code>let numbers = [1, 2, 3, 4, 5];
+        let fruits = ['Apple', 'Banana', 'Orange'];
+        </code></pre>
+            </section>
+
+            <section id="null-undefined">
+                <h3>Null & Undefined</h3>
+                <p>Description: null represents the intentional absence of any value, while undefined indicates that a
+                    variable has been declared but has not been assigned a value.</p>
+                <h4>Examples:</h4>
+                <pre><code>let result = null;
+        let value;
+        </code></pre>
+            </section>
+
+            <section id="booleans-comparisons">
+                <h3>Booleans & Comparisons</h3>
+                <p>Description: Booleans represent two values: true and false. JavaScript supports various comparison
+                    operators for comparing values.</p>
+                <h4>Examples:</h4>
+                <pre><code>let isTrue = true;
+        let isGreater = 10 > 5;
+        </code></pre>
+            </section>
+
+            <section id="comparison">
+                <h3>Loose vs Strict Comparison</h3>
+                <p>Description: JavaScript supports both loose (==) and strict (===) comparison operators. Loose
+                    comparison performs type coercion, while strict comparison checks both value and type.</p>
+                <h4>Examples:</h4>
+                <pre><code>5 == '5'; // true (loose equality)
+        5 === '5'; // false (strict equality)
+        </code></pre>
+            </section>
+
+            <section id="conversion">
+                <h3>Type Conversion</h3>
+                <p>Description: Type conversion involves converting a value from one data type to another. JavaScript
+                    supports both implicit and explicit type conversion.</p>
+                <h4>Examples:</h4>
+                <pre><code>let num = 10;
+        let str = String(num); // Explicit conversion to string
+        let result = '10' - 5; // Implicit conversion from string to number
+        </code></pre>
+            </section>
+        </section>
+
+        <section id="control-flow-basics">
+            <h2>Control Flow Basics</h2>
+
+            <section id="what-is-control-flow">
+                <h3>What is Control Flow?</h3>
+                <p>Description: Control flow refers to the order in which statements are executed in a program. It
+                    allows you to control the flow of your code based on conditions, loops, and other control
+                    structures.</p>
+            </section>
+
+            <section id="for-loops">
+                <h3>For Loops</h3>
+                <p>Description: A for loop is used to repeatedly execute a block of code a specified number of times. It
+                    consists of three parts: initialization, condition, and increment/decrement.</p>
+                <h4>Example:</h4>
+                <pre><code>for (let i = 0; i < 5; i++) {
+        console.log(i);
+        }</code></pre>
+            </section>
+
+            <section id="while-loops">
+                <h3>While Loops</h3>
+                <p>Description: A while loop executes a block of code as long as a specified condition is true.</p>
+                <h4>Example:</h4>
+                <pre><code>let i = 0;
+        while (i < 5) {
+        console.log(i);
+        i++;
+        }</code></pre>
+            </section>
+
+            <section id="do-while-loops">
+                <h3>Do While Loops</h3>
+                <p>Description: A do-while loop is similar to a while loop, but the condition is evaluated after the
+                    code block has been executed, ensuring that the block of code is executed at least once.</p>
+                <h4>Example:</h4>
+                <pre><code>let i = 0;
+        do {
+        console.log(i);
+        i++;
+        } while (i < 5);</code></pre>
+            </section>
+
+            <section id="if-statements">
+                <h3>If Statements</h3>
+                <p>Description: If statements are used to make decisions in your code based on conditions. If the
+                    condition evaluates to true, the code block inside the if statement is executed.</p>
+                <h4>Example:</h4>
+                <pre><code>let num = 10;
+        if (num > 0) {
+        console.log("The number is positive.");
+        }</code></pre>
+            </section>
+
+            <section id="else-else-if">
+                <h3>Else & Else If</h3>
+                <p>Description: Else statements allow you to specify a block of code to be executed if the condition in
+                    the if statement is false. Else if statements can be used to specify additional conditions to be
+                    tested if the initial condition is false.</p>
+                <h4>Example:</h4>
+                <pre><code>let num = 0;
+        if (num > 0) {
+        console.log("The number is positive.");
+        } else if (num < 0) {
+        console.log("The number is negative.");
+        } else {
+        console.log("The number is zero.");
+        }</code></pre>
+            </section>
+
+            <section id="logical-operators">
+                <h3>Logical Operators</h3>
+                <p>Description: Logical operators are used to combine multiple conditions in JavaScript. The three main
+                    logical operators are AND (&&), OR (||), and NOT (!).</p>
+                <h4>Example:</h4>
+                <pre><code>let x = 5;
+        let y = 10;
+        if (x > 0 && y > 0) {
+        console.log("Both x and y are positive.");
+        }
+        if (x > 0 || y > 0) {
+        console.log("At least one of x or y is positive.");
+        }
+        if (!(x > 0)) {
+        console.log("x is not positive.");
+        }</code></pre>
+            </section>
+
+            <section id="logical-not">
+                <h3>Logical NOT</h3>
+                <p>Description: The logical NOT operator (!) is used to reverse the boolean value of an expression. It
+                    converts true to false and false to true.</p>
+                <h4>Example:</h4>
+                <pre><code>let isTrue = true;
+        if (!isTrue) {
+        console.log("The value is false.");
+        } else {
+        console.log("The value is true.");
+        }</code></pre>
+            </section>
+
+            <section id="break-continue">
+                <h3>Break & Continue</h3>
+                <p>Description: The break statement is used to exit a loop prematurely, while the continue statement is
+                    used to skip the current iteration of a loop and continue to the next one.</p>
+                <h4>Example:</h4>
+                <pre><code>for (let i = 0; i < 5; i++) {
+        if (i === 3) {
+            break;
+        }
+        console.log(i);
+        }
+    
+        for (let i = 0; i < 5; i++) {
+        if (i === 2) {
+            continue;
+        }
+        console.log(i);
+        }</code></pre>
+            </section>
+
+            <section id="switch-statements">
+                <h3>Switch Statements</h3>
+                <p>Description: Switch statements are used to perform different actions based on different conditions.
+                    They are often used as an alternative to long if...else if...else chains.</p>
+                <h4>Example:</h4>
+                <pre><code>let day = 3;
+        switch (day) {
+        case 1:
+            console.log("Sunday");
+            break;
+        case 2:
+            console.log("Monday");
+            break;
+        default:
+            console.log("Other day");
+        }</code></pre>
+            </section>
+
+            <section id="variables-block-scope">
+                <h3>Variables & Block Scope</h3>
+                <p>Description: Variables declared with var have function scope, meaning they are accessible throughout
+                    the function they are declared in. Variables declared with let and const have block scope, meaning
+                    they are only accessible within the block they are declared in.</p>
+                <h4>Example:</h4>
+                <pre><code>let x = 10;
+        if (true) {
+        let y = 20;
+        var z = 30;
+        }
+        console.log(x); // 10
+        console.log(y); // ReferenceError: y is not defined
+        console.log(z); // 30</code></pre>
+            </section>
+
+            <section id="functions">
+                <h2>Functions & Methods</h2>
+
+                <section id="what-are-functions">
+                    <h3>What are Functions?</h3>
+                    <p>Description: Functions are reusable blocks of code that perform a specific task. They allow you
+                        to break down your code into smaller, manageable pieces.</p>
+                    <h4>Example:</h4>
+                    <pre><code>function greet() {
+            console.log("Hello, world!");
+            }
+        
+            greet(); // Output: Hello, world!</code></pre>
+                </section>
+
+                <section id="function-declarations-expressions">
+                    <h3>Function Declarations & Expressions</h3>
+                    <p>Description: Functions can be declared using function declarations or function expressions.
+                        Function declarations are hoisted and can be called before they are declared, while function
+                        expressions must be defined before they are called.</p>
+                    <h4>Example:</h4>
+                    <pre><code>// Function Declaration
+            function greet() {
+            console.log("Hello, world!");
+            }
+        
+            // Function Expression
+            const greet = function() {
+            console.log("Hello, world!");
+            };</code></pre>
+                </section>
+
+                <section id="arguments-parameters">
+                    <h3>Arguments & Parameters</h3>
+                    <p>Description: Parameters are placeholders for values that are passed into a function, while
+                        arguments are the actual values passed into the function when it is called.</p>
+                    <h4>Example:</h4>
+                    <pre><code>function greet(name) {
+            console.log("Hello, " + name + "!");
+            }
+        
+            greet("John"); // Output: Hello, John!</code></pre>
+                </section>
+
+                <section id="returning-values">
+                    <h3>Returning Values</h3>
+                    <p>Description: Functions can return a value using the return statement. This allows the function to
+                        pass data back to the code that called it.</p>
+                    <h4>Example:</h4>
+                    <pre><code>function add(a, b) {
+            return a + b;
+            }
+        
+            let sum = add(3, 5);
+            console.log(sum); // Output: 8</code></pre>
+                </section>
+
+                <section id="arrow-functions">
+                    <h3>Arrow Functions</h3>
+                    <p>Description: Arrow functions provide a concise syntax for writing functions. They are especially
+                        useful for writing short, single-line functions.</p>
+                    <h4>Example:</h4>
+                    <pre><code>const greet = () => {
+            console.log("Hello, world!");
+            };
+        
+            greet(); // Output: Hello, world!</code></pre>
+                </section>
+
+                <section id="functions-vs-methods">
+                    <h3>Functions vs Methods</h3>
+                    <p>Description: Functions are standalone blocks of code that can be called independently. Methods,
+                        on the other hand, are functions that are associated with objects and are called using dot
+                        notation.</p>
+                    <h4>Example:</h4>
+                    <pre><code>let person = {
+                name: "John",
+                greet: function() {
+                console.log("Hello, " + this.name + "!");
+                }
+                };
+        
+            person.greet(); // Output: Hello, John!</code></pre>
+                </section>
+
+                <section id="foreach-method-callbacks">
+                    <h3>Foreach Method & Callbacks</h3>
+                    <p>Description: The forEach method is used to iterate over elements in an array and execute a
+                        callback function for each element.</p>
+                    <h4>Example:</h4>
+                    <pre><code>let numbers = [1, 2, 3, 4, 5];
+            numbers.forEach(function(number) {
+            console.log(number);
+            });</code></pre>
+                </section>
+
+                <section id="callback-functions-in-action">
+                    <h3>Callback Functions in Action</h3>
+                    <p>Description: Callback functions are functions that are passed as arguments to other functions and
+                        are executed after a certain task is completed.</p>
+                    <h4>Example:</h4>
+                    <pre><code>function process(callback) {
+            // Do some processing
+            callback();
+            }
+        
+            function greet() {
+            console.log("Hello, world!");
+            }
+        
+            process(greet); // Output: Hello, world!</code></pre>
+                </section>
+
+            </section>
+
+            <section id="object-literals">
+                <h2>Object Literals</h2>
+
+                <section id="objects-at-glance">
+                    <h3>Objects at a Glance</h3>
+                    <p>Description: Objects in JavaScript are data structures that allow you to store collections of
+                        key-value pairs. Each key is a unique identifier (property), and each value can be of any data
+                        type, including other objects. Objects are versatile and commonly used in JavaScript for
+                        organizing and managing data.</p>
+                    <h4>Example:</h4>
+                    <pre><code>
+    // Creating an object to represent a person
+    let person = {
+        firstName: 'John',
+        lastName: 'Doe',
+        age: 30,
+        hobbies: ['reading', 'traveling'],
+        address: {
+            street: '123 Main St',
+            city: 'Anytown',
+            country: 'USA'
+        }
+    };
+    
+    // Accessing object properties
+    console.log(person.firstName); // Output: John
+    console.log(person.age); // Output: 30
+    console.log(person.address.city); // Output: Anytown
+                    </code></pre>
+                </section>
+
+                <section id="creating-an-object-literal">
+                    <h3>Creating an Object Literal</h3>
+                    <p>Description: Object literals are a convenient way to create objects in JavaScript using curly
+                        braces `{}`. Inside the braces, you define key-value pairs separated by colons `:`.</p>
+                    <h4>Example:</h4>
+                    <pre><code>
+    // Creating an object literal to represent a car
+    let car = {
+        make: 'Toyota',
+        model: 'Camry',
+        year: 2022
+    };
+    
+    console.log(car.make); // Output: Toyota
+    console.log(car.year); // Output: 2022
+                    </code></pre>
+                </section>
+
+                <section id="adding-methods">
+                    <h3>Adding Methods</h3>
+                    <p>Description: Methods in JavaScript are functions that are associated with objects. They can be
+                        defined as key-value pairs where the value is a function.</p>
+                    <h4>Example:</h4>
+                    <pre><code>
+    let person = {
+        firstName: 'John',
+        lastName: 'Doe',
+        fullName: function() {
+            return this.firstName + ' ' + this.lastName;
+        }
+    };
+    
+    console.log(person.fullName()); // Output: John Doe
+                    </code></pre>
+                </section>
+
+                <section id="this-keyword">
+                    <h3>'This' Keyword</h3>
+                    <p>Description: In JavaScript, the this keyword refers to the object that owns the currently
+                        executing code. It allows you to access object properties and methods within the object itself.
+                    </p>
+                    <h4>Example:</h4>
+                    <pre><code>
+    let person = {
+        firstName: 'John',
+        lastName: 'Doe',
+        fullName: function() {
+            return this.firstName + ' ' + this.lastName;
+        }
+    };
+    
+    console.log(person.fullName()); // Output: John Doe
+                    </code></pre>
+                </section>
+
+                <section id="objects-in-arrays">
+                    <h3>Objects in Arrays</h3>
+                    <p>Description: Arrays in JavaScript can contain objects as elements. This allows you to store
+                        multiple objects in a single array, making it easy to manage and manipulate collections of
+                        objects.</p>
+                    <h4>Example:</h4>
+                    <pre><code>
+    let people = [
+        { firstName: 'John', lastName: 'Doe' },
+        { firstName: 'Jane', lastName: 'Smith' },
+        { firstName: 'Mike', lastName: 'Johnson' }
+    ];
+    
+    console.log(people[0].firstName); // Output: John
+    console.log(people[1].lastName); // Output: Smith
+                    </code></pre>
+                </section>
+
+                <section id="math-object">
+                    <h3>Math Object</h3>
+                    <p>Description: The Math object in JavaScript provides a set of properties and methods for
+                        mathematical constants and functions.</p>
+                    <h4>Example:</h4>
+                    <pre><code>
+    console.log(Math.PI); // Output: 3.141592653589793
+    console.log(Math.sqrt(16)); // Output: 4
+    console.log(Math.random()); // Output: Random number between 0 and 1
+                    </code></pre>
+                </section>
+
+                <section id="primitive-reference-types">
+                    <h3>Primitive vs Reference Types</h3>
+                    <p>Description: In JavaScript, data types are categorized into primitive and reference types.
+                        Primitive types include numbers, strings, booleans, null, and undefined, while reference types
+                        include objects and functions.</p>
+                    <h4>Example:</h4>
+                    <pre><code>
+    // Primitive type
+    let num = 10;
+    let str = 'Hello';
+    let bool = true;
+    
+    // Reference type
+    let obj = { name: 'John' };
+    let arr = [1, 2, 3];
+                    </code></pre>
+                </section>
+
+                <!-- Add more subsections similarly -->
+
+            </section>
+
+    </main>
+    <footer>
+        <p>JavaScript Study Companion</p>
+    </footer>
+</body>
+
+</html>
